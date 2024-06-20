@@ -1,6 +1,8 @@
 package com.example.afinal;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,25 @@ public class MainActivity3 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void button_Click(View view)
+    {
+        EditText et_m = (EditText) findViewById(R.id.editTextNumber);
+        EditText et_p = (EditText) findViewById(R.id.editTextNumber2);
+        if(et_p.getText().toString().equals(""))
+            et_p.setText(Double.toString(Double.parseDouble(et_m.getText().toString())*.3025));
+        if(et_m.getText().toString().equals(""))
+            et_m.setText(Double.toString(Double.parseDouble(et_p.getText().toString())*3.305785124));
+        else
+        {
+
+        }
+    }
+    public void button_clear(View view)
+    {
+        EditText et_m = (EditText) findViewById(R.id.editTextNumber);
+        EditText et_p = (EditText) findViewById(R.id.editTextNumber2);
+        et_p.setText("");
+        et_m.setText("");
     }
 }

@@ -1,6 +1,8 @@
 package com.example.afinal;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,25 @@ public class MainActivity2 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void button_Click_sp(View view)
+    {
+        Intent intent = new Intent(this, MainActivity3.class);
+        startActivity(intent);
+    }
+    public void button_Click_upg(View view)
+    {
+        Intent intent = new Intent(this, MainActivity4.class);
+        startActivity(intent);
+    }
+    public void button_Click_rd(View view)
+    {
+        Intent intent = new Intent(this, MainActivity5.class);
+        startActivity(intent);
+    }
+    public void button_Click_cal(View view)
+    {
+        Intent intent = new Intent(this, MainActivity6.class);
+        startActivity(intent);
     }
 }
